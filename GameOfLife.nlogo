@@ -5,6 +5,7 @@ patches-own [
 
 to setup
   clear-all
+  
   ask patches [
     ifelse (random-float 100.0 < cell-density) [
       cell-birth
