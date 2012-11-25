@@ -121,13 +121,14 @@ public class GameOfLife {
         GameOfLife gol = new GameOfLife();
         gol.init();
         System.out.println(gol.toString());
+
         for(;;) {
+            gol.runOnce();
+
             // Clear the console
             System.out.println(((char) 27)+"[2J");
             // Set the cursor to position 1,1
             System.out.println(((char) 27)+"[1;1H");
-            
-            gol.runOnce();
             System.out.println(gol.toString());
             
             Thread.sleep(100);
