@@ -92,12 +92,12 @@ public class GameOfLife {
     
     private Cell[] getNeighbours(int x, int y) {
         Cell[] neighbours = new Cell[8];
-        neighbours[0] = mCells[y-1 != -1 ? (y-1) % SIZE : SIZE -1][x-1 != -1 ? (x-1) % SIZE : SIZE -1];
-        neighbours[1] = mCells[y-1 != -1 ? (y-1) % SIZE : SIZE -1][x];
-        neighbours[2] = mCells[y-1 != -1 ? (y-1) % SIZE : SIZE -1][(x+1) % SIZE];
-        neighbours[3] = mCells[y][x-1 != -1 ? (x-1) % SIZE : SIZE -1];
+        neighbours[0] = mCells[y-1 != -1 ? (y-1) % SIZE : SIZE-1][x-1 != -1 ? (x-1) % SIZE : SIZE-1];
+        neighbours[1] = mCells[y-1 != -1 ? (y-1) % SIZE : SIZE-1][x];
+        neighbours[2] = mCells[y-1 != -1 ? (y-1) % SIZE : SIZE-1][(x+1) % SIZE];
+        neighbours[3] = mCells[y][x-1 != -1 ? (x-1) % SIZE : SIZE-1];
         neighbours[4] = mCells[y][(x+1) % SIZE];
-        neighbours[5] = mCells[(y+1) % SIZE][x-1 != -1 ? (x-1) % SIZE : SIZE -1];
+        neighbours[5] = mCells[(y+1) % SIZE][x-1 != -1 ? (x-1) % SIZE : SIZE-1];
         neighbours[6] = mCells[(y+1) % SIZE][x];
         neighbours[7] = mCells[(y+1) % SIZE][(x+1) % SIZE];
         return neighbours;
