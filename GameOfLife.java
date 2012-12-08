@@ -44,20 +44,15 @@ public class GameOfLife {
     
     public void init() {
         forEachCell(new CellRunnable() {
+            final Random rand = new Random();
+
             @Override
             public void run(Cell cell, int x, int y) {
                 mCells[y][x] = new Cell();                
-            }
-        });
-        
-        final Random rand = new Random();
-        forEachCell(new CellRunnable() {
-            @Override
-            public void run(Cell cell, int x, int y) {
                 if (rand.nextFloat() < CELL_DENSITY) {
-                    cell.birth();
+                    mCells[y][x].birth();
                 } else {
-                    cell.death();
+                    mCells[y][x].death();
                 }
             }
         });
