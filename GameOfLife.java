@@ -43,9 +43,9 @@ public class GameOfLife {
     }
     
     public void init() {
-        forEachCell(new CellRunnable() {
-            final Random rand = new Random();
+        final Random rand = new Random();
 
+        forEachCell(new CellRunnable() {
             @Override
             public void run(Cell cell, int x, int y) {
                 mCells[y][x] = new Cell();                
